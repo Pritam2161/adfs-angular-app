@@ -1,0 +1,18 @@
+.link-wrap {
+  height: 30px;
+  .link {
+    width: max-content;
+    text-transform: uppercase;
+    cursor: pointer;
+    .content {
+      position: absolute;
+      height: 40px;
+      line-height: 40px;
+    }
+    .border {
+      border: 1px solid #0074ff;
+      border-radius: 1.5px;
+      background: #0074ff;
+    }
+  }
+}
