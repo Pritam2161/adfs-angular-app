@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "adfs-angular-app": {
+    "agent-potal-angular-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/adfs-angular-app",
+            "outputPath": "dist/agent-potal-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "adfs-angular-app:build"
+            "browserTarget": "agent-potal-angular-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "adfs-angular-app:build:production"
+              "browserTarget": "agent-potal-angular-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "adfs-angular-app:build"
+            "browserTarget": "agent-potal-angular-app:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "adfs-angular-app:serve"
+            "devServerTarget": "agent-potal-angular-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "adfs-angular-app:serve:production"
+              "devServerTarget": "agent-potal-angular-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "adfs-angular-app"
+  "defaultProject": "agent-potal-angular-app"
 }

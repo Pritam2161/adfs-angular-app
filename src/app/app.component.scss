@@ -1,0 +1,31 @@
+
+.page-container {
+  background-color: #e3e8ee;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: benton sans,Arial,Helvetica,sans-serif;
+  padding: 10px;
+  .menu-tab-container {
+    .link {
+      text-transform: uppercase;
+      outline: none;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 30px;
+      padding-bottom: 0.125rem;
+    }
+    .active {
+      border-bottom: 0.2rem solid #0074FF;
+      color: #000000;
+      border-radius: 0.1rem;
+    }
+  }
+  .active-tab {
+    border-bottom: 2px solid #0074ff;
+    color: #303030;
+    border-radius: 2px;
+  }
+}

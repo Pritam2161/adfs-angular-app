@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<section class="page-container">
+  <div class="menu-tab-container">
+    <div *ngFor="let link of tabs" class="link" [routerLink]="link.routerLink" [routerLinkActive]="['active-tab']">
+      {{link.name}}
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</section>

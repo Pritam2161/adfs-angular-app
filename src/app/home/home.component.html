@@ -1,9 +1,0 @@
-<section class="link-wrap">
-  <div class="link">
-    Consent
-    <div class="border"></div>
-  </div>
-</section>
-<button [disabled]="show" (click)="show = true"> SHOW </button>
-<button class="action-btn" [disabled]="!show" (click)="show = false"> HIDE </button>
-<iframe [ngClass]="{'show': show, 'hide': !show}" class="style" src="https://www.w3docs.com"></iframe>
