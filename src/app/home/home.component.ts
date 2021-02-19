@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  show = false;
   constructor() { }
+
+  loadIframe(){
+    this.show = !this.show;
+  }
 }
