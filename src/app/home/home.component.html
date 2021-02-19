@@ -1,10 +1,9 @@
-<!-- <section class="link-wrap">
+<section class="link-wrap">
   <div class="link">
     Consent
-    <div class="content">
-      <iframe style="overflow:hidden;height:100%;width:100%" src="https://www.w3docs.com" height="100%" width="100%"></iframe>
-    </div>
     <div class="border"></div>
   </div>
-</section> -->
-<iframe class="style" src="https://www.w3docs.com"></iframe>
+</section>
+<button [disabled]="show" (click)="show = true"> SHOW </button>
+<button class="action-btn" [disabled]="!show" (click)="show = false"> HIDE </button>
+<iframe [ngClass]="{'show': show, 'hide': !show}" class="style" src="https://www.w3docs.com"></iframe>

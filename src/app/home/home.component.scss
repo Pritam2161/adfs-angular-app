@@ -3,11 +3,6 @@
   .link {
     width: max-content;
     text-transform: uppercase;
-    .content {
-      position: absolute;
-      height: 40px;
-      line-height: 40px;
-    }
     .border {
       border: 1px solid #0074ff;
       border-radius: 1.5px;
@@ -15,7 +10,6 @@
     }
   }
 }
-
 .style {
   overflow: hidden;
   overflow-x: hidden;
@@ -23,8 +17,17 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0px;
+  top: 70px;
   left: 0px;
   right: 0px;
   bottom: 0px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.action-btn {
+  margin-left: 1rem;
 }
