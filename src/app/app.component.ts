@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
-
 import { JwksValidationHandler } from 'angular-oauth2-oidc-jwks';
 
 @Component({
@@ -23,7 +23,7 @@ export class AppComponent {
     },
   ];
 
-  constructor(public oauthService: OAuthService) {
+  constructor(public oauthService: OAuthService, private router: Router, private ngZone: NgZone) {
     this.initializeADFSConfiguring();
   }
 
@@ -39,7 +39,7 @@ export class AppComponent {
     });
     this.oauthService.tokenValidationHandler = new JwksValidationHandler();
     if (!this.oauthService.hasValidAccessToken()) {
-      this.oauthService.loadDiscoveryDocumentAndTryLogin()
+      this.oauthService.loadDiscoveryDocumentAndLogin()
         .then(() => {
           if (!this.oauthService.hasValidAccessToken()) {
             this.oauthService.initImplicitFlow();
@@ -48,5 +48,9 @@ export class AppComponent {
     }
   }
 
+  async logout() {
+    await this.oauthService.logOut();
+    this.ngZone.run(() => this.router.navigate(['/']));
+  }
 
 }

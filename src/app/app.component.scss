@@ -22,6 +22,24 @@
       color: #000000;
       border-radius: 0.1rem;
     }
+    .logout-div {
+      padding-right: 20px;
+      float: right;
+      .logout {
+        background: #054694;
+        border-width: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        min-width: 130px;
+        width: auto;
+        height: 40px;
+        padding: 0 20px;
+        border-radius: 4px;
+        text-transform: uppercase;
+      }
+    }
   }
   .active-tab {
     border-bottom: 2px solid #0074ff;

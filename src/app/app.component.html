@@ -4,6 +4,9 @@
       <div *ngFor="let link of tabs" class="link" [routerLink]="link.routerLink" [routerLinkActive]="['active-tab']">
         {{link.name}}
       </div>
+      <div class="logout-div">
+        <button class="logout" (click)="logout()"> Logout </button>
+      </div>
     </div>
     <router-outlet></router-outlet>
   </ng-container>
