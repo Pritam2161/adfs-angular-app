@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-consent',
-  template: `<iframe class="style" src="http://localhost:4205/"></iframe>`,
+  template: `<iframe class="style" src="https://consent-poc.zeotap.com/login"></iframe>`,
   styles: [`
     .style {
       overflow: hidden;
