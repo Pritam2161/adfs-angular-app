@@ -1,8 +1,10 @@
 <section class="page-container">
-  <div class="menu-tab-container">
-    <div *ngFor="let link of tabs" class="link" [routerLink]="link.routerLink" [routerLinkActive]="['active-tab']">
-      {{link.name}}
+  <ng-container *ngIf="oauthService.hasValidAccessToken()">
+    <div class="menu-tab-container">
+      <div *ngFor="let link of tabs" class="link" [routerLink]="link.routerLink" [routerLinkActive]="['active-tab']">
+        {{link.name}}
+      </div>
     </div>
-  </div>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </ng-container>
 </section>
