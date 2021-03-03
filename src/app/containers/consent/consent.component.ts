@@ -21,6 +21,6 @@ export class ConsentComponent {
   constructor(private oauthService: OAuthService, private sanitizer: DomSanitizer) { 
     let claims: any = this.oauthService.getIdentityClaims();
     const url = 'https://consent-poc.zeotap.com/login';
-    this.src = this.sanitizer.bypassSecurityTrustResourceUrl(`${url}?${claims.upn}`)
+    this.src = this.sanitizer.bypassSecurityTrustResourceUrl(`${url}?userId=${claims.upn}`)
   }
 }
